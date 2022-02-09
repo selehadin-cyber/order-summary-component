@@ -11,7 +11,7 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  background-image: url(./images/pattern-background-desktop.svg);
+  background-image: url(/images/pattern-background-desktop.svg);
   background-repeat: no-repeat;
   /* Do not repeat the image */
   background-size: cover;
@@ -125,13 +125,13 @@ button[type=submit] {
 button[type=submit]:hover {
   opacity: 0.65;
 }
-button[type=cancel] {
+button[type=reset] {
   margin-bottom: 0.8rem;
   background: transparent;
   color: #7280a7;
   padding: 1rem;
 }
-button[type=cancel]:hover {
+button[type=reset]:hover {
   color: #1f2f56;
 }
 
