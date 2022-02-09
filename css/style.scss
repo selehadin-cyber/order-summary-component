@@ -1,0 +1,138 @@
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body {
+    @include flexCenter(column);
+    height: 100vh;
+    background-image: url(/images/pattern-background-desktop.svg);
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container {
+    @include flexCenter(column);
+    width: 400px;
+    border-radius: 25px;
+    overflow: hidden;
+    background: white;
+}
+
+.text {
+    padding: 2rem;
+    @include flexCenter(column);
+}
+h1 {
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    color: hsl(223, 47%, 23%);
+}
+main .text > p:nth-child(2) {
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    color: hsl(224, 23%, 55%);
+    margin: 13px;
+    font-size: 16px;
+    padding: 10px;
+}
+.plancontainer {
+    @include flexCenter(row);
+    justify-content: space-around;
+    width: 100%;
+    background: hsl(225, 100%, 98%);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 65px auto;
+    grid-template-rows: repeat(2, 1fr);
+    margin-right: 40px;
+    align-items: center;
+    .one {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        margin-bottom: 0;
+      }
+    .two {
+        grid-column: 2 / 3;
+    }
+    .three {
+        grid-column: 2 / 3;
+        color: #7280a7;
+    }
+}
+a {
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    &:hover {
+        text-decoration: none;
+    }
+}
+strong {    color: hsl(223, 47%, 23%);
+}
+a strong {
+    font-size: 13px;
+}
+strong, p {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+}
+button{
+    width: 100%;
+    border-radius: 10px;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 900;
+    &[type="submit"] {
+        margin-bottom: 10px;
+        background-color: hsl(245, 75%, 52%);
+        color: white;
+        padding: 1rem;
+        box-shadow: 0 1rem 1.5rem rgba(hsl(223, 47%, 23%), .2);
+        border: none;
+        &:hover {
+            opacity: 0.65;
+        }
+    }
+    &[type="cancel"] {
+        margin-bottom: .8rem;
+        background: transparent;
+        color: hsl(224, 23%, 55%);
+        padding: 1rem;
+        &:hover {
+            color: hsl(223, 47%, 23%);
+        }
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution {
+     a {
+        color: hsl(228, 45%, 44%);
+     }
+    }
+    .attribution {
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+    }
+@media (max-width: 500px) {
+    body {
+        @include flexCenter(column);
+        height: 100vh;
+        background-image: url(/images/pattern-background-mobile.svg);
+    
+}
+}
