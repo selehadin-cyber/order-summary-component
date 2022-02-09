@@ -14,9 +14,11 @@
 body {
     @include flexCenter(column);
     height: 100vh;
-    background-image: url(/images/pattern-background-desktop.svg);
+    background-color: hsla(234, 95%, 95%, 0.79);
+    background-position: top;
+    background-size: 100%;
+    background-image: url(../images/pattern-background-desktop.svg);
     background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover;
     background-attachment: fixed;
 }
 .container {
@@ -95,6 +97,7 @@ button{
     border-radius: 10px;
     font-family: 'Red Hat Display', sans-serif;
     font-weight: 900;
+    cursor: pointer;
     &[type="submit"] {
         margin-bottom: 10px;
         background-color: hsl(245, 75%, 52%);

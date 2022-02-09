@@ -11,14 +11,12 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100vh;
-<<<<<<< HEAD
-  background-image: url(/images/pattern-background-desktop.svg);
-=======
+  background-color: rgba(230, 233, 254, 0.79);
+  background-position: top;
+  background-size: 100%;
   background-image: url(../images/pattern-background-desktop.svg);
->>>>>>> 27b0dd8be8bd3c7c82402c9a9be8842029c95d16
   background-repeat: no-repeat;
   /* Do not repeat the image */
-  background-size: cover;
   background-attachment: fixed;
 }
 
@@ -117,6 +115,7 @@ button {
   border-radius: 10px;
   font-family: "Red Hat Display", sans-serif;
   font-weight: 900;
+  cursor: pointer;
 }
 button[type=submit] {
   margin-bottom: 10px;
